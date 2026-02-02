@@ -1,0 +1,35 @@
+.beam-viz {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.beam-viz__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e3c72;
+  margin-bottom: 8px;
+}
+
+.beam-viz__container {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.beam-viz__svg {
+  width: 100%;
+  height: auto;
+}
+
+.beam-viz__flange {
+  fill: #2a5298;
+  stroke: #1e3c72;
+  stroke-width: 0.5;
+}
+
+.beam-viz__web {
+  fill: #5d6d7e;
+  stroke: #2c3e50;
+  stroke-width: 0.5;
+}

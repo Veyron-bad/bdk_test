@@ -1,0 +1,299 @@
+.what-is-bdk {
+  padding: 80px 20px;
+}
+
+.what-is-bdk h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1e3c72;
+}
+
+.what-is-bdk__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.what-is-bdk__text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.what-is-bdk__text li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+.what-is-bdk__text li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+/* Блок с изображением — карточка в стиле современных галерей */
+.what-is-bdk__image {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  /* background: linear-gradient(145deg, #e8e9ec 0%, #f2f3f5 100%); */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 10px 20px -4px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.what-is-bdk__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.what-is-bdk__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* Кнопки слайдера — компактный минималистичный стиль */
+.what-is-bdk__slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e3c72;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.what-is-bdk__slider-btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.what-is-bdk__slider-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.what-is-bdk__slider-btn:active {
+  transform: translateY(-50%) scale(0.97);
+}
+
+.what-is-bdk__slider-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(30, 60, 114, 0.4);
+}
+
+.what-is-bdk__slider-btn--prev {
+  left: 12px;
+}
+
+.what-is-bdk__slider-btn--next {
+  right: 12px;
+}
+
+/* Точки слайдера */
+.what-is-bdk__dots {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.what-is-bdk__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.what-is-bdk__dot:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.15);
+}
+
+.what-is-bdk__dot--active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+}
+
+.what-is-bdk__dot--active:hover {
+  background: #e55a2b;
+  border-color: #e55a2b;
+}
+
+/* Планшет */
+@media (max-width: 992px) {
+  .what-is-bdk__content {
+    gap: 30px;
+  }
+
+  .what-is-bdk h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+}
+
+/* Мобильные и узкие экраны — одна колонка */
+@media (max-width: 768px) {
+  .what-is-bdk {
+    padding: 50px 16px;
+  }
+
+  .what-is-bdk h2 {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .what-is-bdk__content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* В одной колонке контейнер картинки без соседа — задаём минимальную высоту */
+  .what-is-bdk__image {
+    min-height: 280px;
+  }
+
+  .what-is-bdk__image {
+    border-radius: 12px;
+  }
+
+  .what-is-bdk__slider-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .what-is-bdk__slider-btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .what-is-bdk__slider-btn--prev {
+    left: 10px;
+  }
+
+  .what-is-bdk__slider-btn--next {
+    right: 10px;
+  }
+
+  .what-is-bdk__dots {
+    bottom: 12px;
+    gap: 8px;
+    padding: 6px 12px;
+  }
+
+  .what-is-bdk__dot {
+    width: 8px;
+    height: 8px;
+    border-width: 1.5px;
+  }
+
+  .what-is-bdk__text p {
+    font-size: 0.95rem;
+  }
+
+  .what-is-bdk__text h3 {
+    font-size: 1.1rem;
+  }
+
+  .what-is-bdk__text li {
+    padding: 8px 0;
+    padding-left: 28px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+  .what-is-bdk {
+    padding: 40px 12px;
+  }
+
+  .what-is-bdk h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .what-is-bdk__image {
+    min-height: 220px;
+    border-radius: 10px;
+  }
+
+  .what-is-bdk__slider-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .what-is-bdk__slider-btn-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .what-is-bdk__slider-btn--prev {
+    left: 8px;
+  }
+
+  .what-is-bdk__slider-btn--next {
+    right: 8px;
+  }
+
+  .what-is-bdk__dots {
+    bottom: 10px;
+    gap: 6px;
+    padding: 5px 10px;
+  }
+
+  .what-is-bdk__dot {
+    width: 6px;
+    height: 6px;
+    border-width: 1px;
+  }
+
+  .what-is-bdk__content {
+    gap: 20px;
+  }
+}

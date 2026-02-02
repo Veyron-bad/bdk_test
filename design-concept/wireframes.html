@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прототипы страниц — БДК</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; background: #e8eaed; padding: 24px; color: #2c3e50; }
+    h1 { font-family: 'Montserrat', sans-serif; font-size: 24px; margin-bottom: 24px; color: #1e3c72; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+    .tab { padding: 10px 20px; background: #fff; border: 1px solid #dfe6e9; border-radius: 8px; cursor: pointer; font-weight: 600; }
+    .tab:hover, .tab.active { background: #1e3c72; color: #fff; border-color: #1e3c72; }
+    .proto { display: none; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-width: 1200px; }
+    .proto.active { display: block; }
+    .wireframe { font-size: 11px; color: #5d6d7e; }
+    .wf-header { height: 60px; background: #1e3c72; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
+    .wf-header .logo { font-weight: 700; }
+    .wf-header .nav { display: flex; gap: 16px; }
+    .wf-hero { height: 300px; background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; padding: 24px; }
+    .wf-hero h2 { font-size: 28px; margin-bottom: 8px; }
+    .wf-hero p { font-size: 14px; opacity: 0.9; margin-bottom: 16px; }
+    .wf-hero .btn { background: #ff6b35; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; }
+    .wf-section { padding: 40px 24px; border-bottom: 1px solid #ecf0f1; }
+    .wf-section:nth-child(even) { background: #f8f9fa; }
+    .wf-section h3 { font-size: 18px; color: #1e3c72; margin-bottom: 16px; }
+    .wf-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .wf-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .wf-card { background: #fff; border: 1px dashed #bdc3c7; border-radius: 8px; padding: 20px; min-height: 120px; }
+    .wf-catalog-layout { display: grid; grid-template-columns: 200px 1fr; gap: 24px; min-height: 400px; }
+    .wf-filters { background: #f8f9fa; border-radius: 8px; padding: 20px; }
+    .wf-filters h4 { font-size: 12px; margin-bottom: 12px; color: #1e3c72; }
+    .wf-product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 24px; }
+    .wf-product-gallery { background: #ecf0f1; border-radius: 8px; min-height: 280px; display: flex; align-items: center; justify-content: center; color: #5d6d7e; }
+    .wf-product-info h2 { font-size: 20px; margin-bottom: 12px; color: #1e3c72; }
+    .wf-product-info .price { font-size: 22px; font-weight: 700; color: #ff6b35; margin: 16px 0; }
+    .wf-product-info .specs { margin: 16px 0; font-size: 14px; color: #5d6d7e; }
+    .wf-product-info .cta { background: #ff6b35; color: #fff; padding: 14px 28px; border-radius: 8px; border: none; font-weight: 600; margin-top: 16px; cursor: pointer; }
+    @media (max-width: 768px) {
+      .wf-grid-2, .wf-grid-3 { grid-template-columns: 1fr; }
+      .wf-catalog-layout { grid-template-columns: 1fr; }
+      .wf-product-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Прототипы страниц — БДК балки</h1>
+  <div class="tabs">
+    <div class="tab active" data-proto="home">Главная</div>
+    <div class="tab" data-proto="catalog">Каталог</div>
+    <div class="tab" data-proto="product">Карточка товара</div>
+  </div>
+
+  <div id="proto-home" class="proto active">
+    <div class="wireframe">
+      <div class="wf-header">
+        <span class="logo">Логотип БДК</span>
+        <nav class="nav">Главная | Каталог | Калькулятор | О компании | Контакты</nav>
+        <span>☎ +7 (999) 123-45-67  [Заявка]</span>
+      </div>
+      <div class="wf-hero">
+        <h2>Балки БДК для промышленного и гражданского строительства</h2>
+        <p>Собственное производство. Расчёт и доставка по России</p>
+        <button class="btn">Рассчитать стоимость</button>
+      </div>
+      <div class="wf-section">
+        <h3>Что такое БДК</h3>
+        <div class="wf-grid-2">
+          <div class="wf-card">Текст о балочно-диафрагмальных конструкциях, преимуществах, сферах применения.</div>
+          <div class="wf-card">[Слайдер фото балок]</div>
+        </div>
+      </div>
+      <div class="wf-section">
+        <h3>Популярные размеры</h3>
+        <div class="wf-grid-3">
+          <div class="wf-card">Карточка: БДК 12м × 300мм</div>
+          <div class="wf-card">Карточка: БДК 9м × 250мм</div>
+          <div class="wf-card">Карточка: БДК 6м × 200мм</div>
+        </div>
+      </div>
+      <div class="wf-section">
+        <h3>Калькулятор</h3>
+        <div class="wf-card">Поля: длина, сечение, кол-во → Кнопка «Рассчитать»</div>
+      </div>
+      <div class="wf-section">
+        <h3>Преимущества</h3>
+        <div class="wf-grid-3">
+          <div class="wf-card">Иконка + текст</div>
+          <div class="wf-card">Иконка + текст</div>
+          <div class="wf-card">Иконка + текст</div>
+        </div>
+      </div>
+      <div class="wf-section">
+        <h3>Форма заявки</h3>
+        <div class="wf-card">Имя, телефон, email, тип проекта, комментарий [Отправить]</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="proto-catalog" class="proto">
+    <div class="wireframe">
+      <div class="wf-header">
+        <span class="logo">Логотип БДК</span>
+        <nav class="nav">Главная | Каталог | Калькулятор</nav>
+      </div>
+      <div class="wf-section">
+        <div class="wf-catalog-layout">
+          <aside class="wf-filters">
+            <h4>Фильтры</h4>
+            <p>Тип</p>
+            <p>Длина</p>
+            <p>Сечение</p>
+            <p>[Сбросить]</p>
+          </aside>
+          <div>
+            <p style="margin-bottom: 16px;">Сортировка: по цене | по размеру</p>
+            <div class="wf-grid-3">
+              <div class="wf-card">Фото | БДК-12.0-3.0 | от 45 000 ₽</div>
+              <div class="wf-card">Фото | БДК-9.0-2.5 | от 32 000 ₽</div>
+              <div class="wf-card">Фото | БДК-6.0-2.0 | от 18 000 ₽</div>
+              <div class="wf-card">...</div>
+              <div class="wf-card">...</div>
+              <div class="wf-card">...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="proto-product" class="proto">
+    <div class="wireframe">
+      <div class="wf-header">
+        <span class="logo">Логотип БДК</span>
+        <nav class="nav">Каталог > БДК > БДК-12.0-3.0</nav>
+      </div>
+      <div class="wf-product-layout">
+        <div class="wf-product-gallery">[Галерея фото балки]</div>
+        <div class="wf-product-info">
+          <h2>БДК-12.0-3.0</h2>
+          <p>Артикул: BDK-120-30</p>
+          <div class="price">от 45 000 ₽ / шт</div>
+          <div class="specs">
+            Длина: 12 м • Сечение: 300 мм • Вес: ~450 кг
+          </div>
+          <p>Описание, область применения.</p>
+          <button class="cta">Запросить расчёт</button>
+        </div>
+      </div>
+      <div class="wf-section">
+        <h3>Характеристики</h3>
+        <div class="wf-card">Таблица характеристик</div>
+      </div>
+      <div class="wf-section">
+        <h3>Похожие товары</h3>
+        <div class="wf-grid-3">
+          <div class="wf-card">БДК-9.0-3.0</div>
+          <div class="wf-card">БДК-12.0-2.5</div>
+          <div class="wf-card">БДК-6.0-3.0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(t => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.proto').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        document.getElementById('proto-' + t.dataset.proto).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

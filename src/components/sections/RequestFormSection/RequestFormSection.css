@@ -1,0 +1,95 @@
+.request-form {
+  padding: 80px 20px;
+}
+
+.request-form h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1e3c72;
+}
+
+.request-form__form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.request-form__form .form-group {
+  margin-bottom: 20px;
+}
+
+.request-form__form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+.request-form__calc-badge {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #ff6b35;
+  margin-left: 8px;
+}
+
+.request-form__form .form-group input,
+.request-form__form .form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.request-form__form .form-group input:focus,
+.request-form__form .form-group textarea:focus {
+  outline: none;
+  border-color: #2a5298;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.15);
+}
+
+.request-form__error {
+  display: block;
+  font-size: 13px;
+  color: #e74c3c;
+  margin-top: 6px;
+}
+
+.custom-select--error .custom-select__trigger {
+  border-color: #e74c3c;
+}
+
+.request-form__form .form-group .checkbox-label {
+  display: flex;
+  gap: 10px;
+}
+
+.request-form__form .form-group .checkbox-label input {
+  width: 15px;
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+.request-form__form .btn-primary {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

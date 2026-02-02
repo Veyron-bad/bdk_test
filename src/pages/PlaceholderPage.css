@@ -1,0 +1,15 @@
+.placeholder-page {
+  padding: 80px 20px;
+  min-height: 50vh;
+}
+
+.placeholder-page__title {
+  font-size: 2rem;
+  color: #1e3c72;
+  margin-bottom: 16px;
+}
+
+.placeholder-page__text {
+  color: #666;
+  font-size: 1.1rem;
+}

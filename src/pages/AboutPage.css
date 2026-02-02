@@ -1,0 +1,258 @@
+.about-page {
+  width: 100%;
+}
+
+/* Hero */
+.about-hero {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.about-hero__subtitle {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Intro */
+.about-intro {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.about-intro__title {
+  font-size: 1.75rem;
+  color: #1e3c72;
+  margin-bottom: 24px;
+}
+
+.about-intro__content p {
+  margin-bottom: 16px;
+  color: #2c3e50;
+  max-width: 800px;
+}
+
+/* Stats */
+.about-stats {
+  padding: 50px 20px;
+  background: #f8f9fa;
+}
+
+.about-stats__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-stats__item {
+  text-align: center;
+  padding: 24px 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.about-stats__number {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-bottom: 8px;
+}
+
+.about-stats__label {
+  font-size: 0.9rem;
+  color: #5d6d7e;
+}
+
+/* Values */
+.about-values {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.about-values__title {
+  font-size: 1.75rem;
+  color: #1e3c72;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.about-values__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-values__item {
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #2a5298;
+}
+
+.about-values__item-title {
+  font-size: 1.1rem;
+  color: #1e3c72;
+  margin-bottom: 8px;
+}
+
+.about-values__item p {
+  color: #5d6d7e;
+  font-size: 0.95rem;
+}
+
+/* Links to subpages */
+.about-links {
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.about-links__title {
+  font-size: 1.75rem;
+  color: #1e3c72;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.about-links__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about-links__card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-links__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-links__card-title {
+  font-size: 1.25rem;
+  color: #1e3c72;
+  margin-bottom: 12px;
+}
+
+.about-links__card-text {
+  flex: 1;
+  color: #5d6d7e;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.about-links__card-link {
+  font-weight: 600;
+  color: #ff6b35;
+}
+
+/* CTA */
+.about-cta {
+  padding: 60px 20px;
+  background: #1e3c72;
+  color: #fff;
+  text-align: center;
+}
+
+.about-cta__title {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+}
+
+.about-cta__text {
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.about-cta__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-cta__buttons .btn-primary {
+  background: #ff6b35;
+}
+
+.about-cta__buttons .btn-primary:hover {
+  background: #e55a2b;
+}
+
+.about-cta__buttons .btn-outline {
+  color: #fff;
+  border-color: #fff;
+}
+
+.about-cta__buttons .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-stats__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-links__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 40px 16px;
+  }
+
+  .about-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .about-intro,
+  .about-values,
+  .about-links,
+  .about-cta {
+    padding: 40px 16px;
+  }
+
+  .about-stats__list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-values__list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta__buttons {
+    flex-direction: column;
+  }
+
+  .about-cta__buttons a {
+    width: 100%;
+  }
+}
