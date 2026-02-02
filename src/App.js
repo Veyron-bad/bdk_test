@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header/Header';
 import Footer from './components/layout/Footer/Footer';
 import './App.css';
@@ -18,7 +18,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Router basename='/bdk_test' future={{ v7_startTransition: true }}>
+    <Router future={{ v7_startTransition: true }}>
       <div className="App">
         <Header />
         <main className="main-content">
