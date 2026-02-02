@@ -18,7 +18,7 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Router basename='/bdk_test/' future={{ v7_startTransition: true }}>
+    <Router future={{ v7_startTransition: true }}>
       <div className="App">
         <Header />
         <main className="main-content">
