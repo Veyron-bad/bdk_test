@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbdk_new=self.webpackChunkbdk_new||[]).push([[948],{188(e,s,a){a.r(s),a.d(s,{default:()=>d});a(43);var c=a(303),l=a(579);const d=()=>(0,l.jsx)("div",{className:"calculator-page",children:(0,l.jsx)(c.A,{})})}}]);
+//# sourceMappingURL=948.b3f7f400.chunk.js.map
