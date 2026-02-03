@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bdk_test/static/css/main.63c122c7.css",
-    "main.js": "/bdk_test/static/js/main.3928cd11.js",
+    "main.js": "/bdk_test/static/js/main.19a6aae0.js",
     "static/css/650.b062627a.chunk.css": "/bdk_test/static/css/650.b062627a.chunk.css",
     "static/js/650.fdac11cb.chunk.js": "/bdk_test/static/js/650.fdac11cb.chunk.js",
     "static/css/378.f892679b.chunk.css": "/bdk_test/static/css/378.f892679b.chunk.css",
@@ -22,7 +22,7 @@
     "static/media/bdk_balki_2.jpg": "/bdk_test/static/media/bdk_balki_2.816c2076f413d6f602ab.jpg",
     "index.html": "/bdk_test/index.html",
     "main.63c122c7.css.map": "/bdk_test/static/css/main.63c122c7.css.map",
-    "main.3928cd11.js.map": "/bdk_test/static/js/main.3928cd11.js.map",
+    "main.19a6aae0.js.map": "/bdk_test/static/js/main.19a6aae0.js.map",
     "650.b062627a.chunk.css.map": "/bdk_test/static/css/650.b062627a.chunk.css.map",
     "650.fdac11cb.chunk.js.map": "/bdk_test/static/js/650.fdac11cb.chunk.js.map",
     "378.f892679b.chunk.css.map": "/bdk_test/static/css/378.f892679b.chunk.css.map",
@@ -39,6 +39,6 @@
   },
   "entrypoints": [
     "static/css/main.63c122c7.css",
-    "static/js/main.3928cd11.js"
+    "static/js/main.19a6aae0.js"
   ]
 }
